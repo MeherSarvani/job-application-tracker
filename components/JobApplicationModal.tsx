@@ -72,7 +72,7 @@ export default function JobApplicationModal({
           .filter((tag) => tag.length > 0)
           .map((tag) => [...tag[0].toUpperCase(), ...tag.slice(1)].join("")),
       });
-      if (!result?.error) {
+      if (!result) {
         setOpen(false);
       } else {
         console.error("Failed to create job application");
