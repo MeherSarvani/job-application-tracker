@@ -30,6 +30,10 @@ export const auth = betterAuth({
       },
     },
   },
+  baseURL: {
+    allowedHosts: ["localhost:3000", "*.vercel.app"],
+    protocol: "https",
+  },
 });
 
 export async function getSession() {
