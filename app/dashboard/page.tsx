@@ -6,7 +6,6 @@ import { Suspense } from "react";
 
 const getBoardDetails = async (userId: string) => {
   "use cache";
-  console.log("Fetching board from MongoDB");
   await connectDB();
   const board = await Board.findOne({
     name: "Job Hunt",

@@ -72,7 +72,6 @@ export default function JobApplicationCard({
                   <DropdownMenuItem
                     onClick={() => {
                       setIsEditing(true);
-                      console.log("Edit clicked");
                     }}
                   >
                     <Edit2></Edit2> Edit

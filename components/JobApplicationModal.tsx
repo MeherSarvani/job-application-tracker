@@ -72,7 +72,7 @@ export default function JobApplicationModal({
           .filter((tag) => tag.length > 0)
           .map((tag) => [...tag[0].toUpperCase(), ...tag.slice(1)].join("")),
       });
-      if (!result) {
+      if (result) {
         setOpen(false);
       } else {
         console.error("Failed to create job application");
@@ -90,7 +90,6 @@ export default function JobApplicationModal({
   }, [mode, isEditingJobApplication]);
 
   const handleEditSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    console.log("Submitting edit form with data:", formData);
     e.preventDefault();
     try {
       const updatedJobApplication = await updateJobApplication(job?._id || "", {

@@ -26,7 +26,6 @@ export default function SignUp() {
   const router = useRouter();
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    console.log("Submitting sign up form with:", { name, email, password });
     e.preventDefault();
     setLoading(true);
     if (!name || !email || !password) {

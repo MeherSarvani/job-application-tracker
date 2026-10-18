@@ -50,7 +50,6 @@ export default function KanbanBoard({
   boardDetails: Board;
   userId: string;
 }) {
-  console.log("boardDetails", boardDetails);
   const columns = boardDetails.columns;
 
   const DroppableColumn = ({
@@ -95,7 +94,6 @@ export default function KanbanBoard({
           </CardHeader>
           <CardContent className="space-y-2 h-200 overflow-y-auto rounded-b-lg shadow-md pt-4 bg-gray-50/50">
             {sortedJobApplications?.map((job, key) => {
-              console.log("rendering job card for job", job);
               return <SortableJobCard key={key} job={job}></SortableJobCard>;
             })}
             <JobApplicationModal

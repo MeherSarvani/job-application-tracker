@@ -10,7 +10,6 @@ export const handleJobCardMove = async (
   job: JobApplicationType,
   col: ColumnType,
 ) => {
-  console.log("job,col", job, col);
   const colId = col?._id;
   const jobId = job?._id;
   //if job id already exists in column dont push it again
